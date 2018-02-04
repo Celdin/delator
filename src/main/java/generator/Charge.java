@@ -5,8 +5,8 @@ public enum Charge {
 	JURIANISTE("de jurianiste", 1),
 	MORT("de mort", 1),
 	SORCELLERIE("de sorcellerie", 1),
-	HERESIE("de simple hérésie", 1),
-	ESCLAVAGE("d'esclavagisme illégale", 1),
+	HERESIE("de simple hÃ©rÃ©sie", 1),
+	ESCLAVAGE("d'esclavagisme illÃ©gale", 1),
 	CHARLATANISME("de charlatanisme", 1),
 	COMPLOT("de complot", 1);
 

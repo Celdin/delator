@@ -38,9 +38,9 @@ public class NPC {
 	public enum Classe {
 		Barbare,
 		Barde,
-		Prêtre,
+		PrÃ©tre,
 		Paladin,
-		Rôdeur,
+		RÃ©deur,
 		Roublard,
 		Ensorceleur,
 		Magicien;
@@ -52,15 +52,15 @@ public class NPC {
 		Paysant("Paysant"),
 		Serviteur("Serviteur"),
 		Apprenti("Apprenti"),
-		Commercant("Commerçant"),
+		Commercant("CommerÃ§ant"),
 		Artisant("Artisant"),
-		Petit_Proprietaire("petit Propriétaire terrestre"),
+		Petit_Proprietaire("petit PropriÃ©taire terrestre"),
 		Bourgmestre("Bourgmestre"),
-		Gros_Commercant("gros Commerçant"),
-		Gros_Proprietaire("grand Propriétaire terrestre"),
-		Pretre("Prêtre"),
+		Gros_Commercant("gros CommerÃ§ant"),
+		Gros_Proprietaire("grand PropriÃ©taire terrestre"),
+		Pretre("PrÃ©tre"),
 		Chevalier("Chevalier"),
-		Eveque("Évèque"),
+		Eveque("Ã©vÃ©que"),
 		Banneret("Banneret"),
 		Baron("Baron"),
 		Compte("Compte");
@@ -346,7 +346,7 @@ public class NPC {
 				metier = Metier.Paysant;
 			} else if (rng2 == 2) {
 				metier = Metier.Serviteur;
-			} else if (rng2 == 4) {
+			} else if (rng2 == 3) {
 				metier = Metier.Apprenti;
 			}
 		} else if (rng1 < 85) {
@@ -370,7 +370,6 @@ public class NPC {
 		} else if (rng1 < 96) {
 			metier = Metier.Pretre;
 		} else if (rng1 < 97) {
-			Integer rng2 = random.nextInt(3);
 			metier = Metier.Eveque;
 		} else if (rng1 < 99) {
 			if (random.nextBoolean()) {

@@ -24,7 +24,7 @@ public class Bot {
 		jda = new JDABuilder(AccountType.BOT).setToken(DISCORD_TOKEN).setBulkDeleteSplittingEnabled(false).buildBlocking();
 		System.out.println("Connecte avec: " + jda.getSelfUser().getName());
 		int size = jda.getGuilds().size();
-		System.out.println("Autorisé sur " + size + " serveur" + (size > 1 ? "s" : ""));
+		System.out.println("AutorisÃ© sur " + size + " serveur" + (size > 1 ? "s" : ""));
 		for (Guild guild : jda.getGuilds()){
 			System.out.println("	 - " + guild.getName());
 		}
