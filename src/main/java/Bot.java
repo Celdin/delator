@@ -30,7 +30,7 @@ public class Bot {
 		jda.addEventListener(new ListenerAdapter() {
 			@Override
 			public void onMessageReceived(MessageReceivedEvent event) {
-				System.out.println(String.format("[PM] %#s: %s%n", event.getAuthor(), event.getMessage().getContentDisplay()));
+				System.out.println(String.format("%#s: %s%n", event.getAuthor(), event.getMessage().getContentDisplay()));
 				if (event.isFromType(ChannelType.TEXT)) {
 					if(event.getMessage().getMentionedUsers().contains(jda.getSelfUser())){
 						try {
