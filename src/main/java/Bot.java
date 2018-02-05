@@ -16,12 +16,11 @@ import javax.security.auth.login.LoginException;
 import java.io.IOException;
 
 public class Bot {
-	private static final String DISCORD_TOKEN = "NDA3ODQ1NjE5MzE5OTYzNjQ4.DVHdpA.VMk4ZwV21dVXkVx8BwQCUEtrX1U";
 
 	private JDA jda;
 
-	public Bot() throws LoginException, InterruptedException {
-		jda = new JDABuilder(AccountType.BOT).setToken(DISCORD_TOKEN).setBulkDeleteSplittingEnabled(false).buildBlocking();
+	public Bot(String token) throws LoginException, InterruptedException {
+		jda = new JDABuilder(AccountType.BOT).setToken(token).setBulkDeleteSplittingEnabled(false).buildBlocking();
 		System.out.println("Connecte avec: " + jda.getSelfUser().getName());
 		int size = jda.getGuilds().size();
 		System.out.println("Autorisé sur " + size + " serveur" + (size > 1 ? "s" : ""));
