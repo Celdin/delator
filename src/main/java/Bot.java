@@ -2,10 +2,7 @@ import generator.Generator;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
-import net.dv8tion.jda.core.entities.ChannelType;
-import net.dv8tion.jda.core.entities.Guild;
-import net.dv8tion.jda.core.entities.Member;
-import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.core.entities.*;
 import net.dv8tion.jda.core.entities.impl.DataMessage;
 import net.dv8tion.jda.core.events.Event;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
@@ -21,6 +18,7 @@ public class Bot {
 
 	public Bot(String token) throws LoginException, InterruptedException {
 		jda = new JDABuilder(AccountType.BOT).setToken(token).setBulkDeleteSplittingEnabled(false).buildBlocking();
+		jda.getPresence().setGame(Game.of(Game.GameType.DEFAULT, "écoute ton voisin"));
 		System.out.println("Connecte avec: " + jda.getSelfUser().getName());
 		int size = jda.getGuilds().size();
 		System.out.println("Autorisé sur " + size + " serveur" + (size > 1 ? "s" : ""));

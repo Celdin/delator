@@ -3,10 +3,7 @@ package generator;
 import generator.npc.NPC;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Generator {
 	public static String jaccuse() throws IOException {
@@ -53,12 +50,38 @@ public class Generator {
 					break;
 				case CONJOINT:
 					cible.setSexe(source.getSexe().equals(NPC.Sexe.Female)?NPC.Sexe.Male:NPC.Sexe.Female);
+					List<NPC.Race> races = new ArrayList<>();
+					races.add(NPC.Race.Human);
+					races.add(source.getRace());
+					races.add(source.getRace());
+					races.add(source.getRace());
+					if(NPC.Race.Orc.equals(source.getRace())){
+						races.add(NPC.Race.Half_Orc);
+					}else if(NPC.Race.Half_Orc.equals(source.getRace())){
+						races.add(NPC.Race.Orc);
+					}else if(NPC.Race.Elf.equals(source.getRace())){
+						races.add(NPC.Race.Half_Elf);
+					}else if(NPC.Race.Half_Elf.equals(source.getRace())){
+						races.add(NPC.Race.Elf);
+					}else if(NPC.Race.Halfling.equals(source.getRace())){
+						races.add(NPC.Race.Gnome);
+					}else if(NPC.Race.Gnome.equals(source.getRace())){
+						races.add(NPC.Race.Halfling);
+					}else if(NPC.Race.Human.equals(source.getRace())){
+						races.addAll(Arrays.asList(NPC.Race.values()));
+					}
+					Collections.shuffle(races);
+					cible.setRace(races.get(0));
 					cible.generate();
-					result += target.getName(source.getSexe().equals(NPC.Sexe.Female)) + " " + cible.getNom() + "[" + cible.getRace().getNom() + "] (" + cible.getMetier().getNom() + ")";
+					result += target.getName(NPC.Sexe.Female.equals(source.getSexe())) + " " + cible.getNom() + "[" + cible.getRace().getNom() + "] (" + cible.getMetier().getNom() + ")";
 					break;
+				case CONCURRENCE:
+					if(!(NPC.Metier.Esclave.equals(source.getMetier()) || NPC.Metier.Serviteur.equals(source.getMetier()))) {
+						cible.setMetier(source.getMetier());
+					}
 				default:
 					cible.generate();
-					result += target.getName(source.getSexe().equals(NPC.Sexe.Female)) + " " + cible.getNom() + "[" + cible.getRace().getNom() + "] (" + cible.getMetier().getNom() + ")";
+					result += target.getName(NPC.Sexe.Female.equals(source.getSexe())) + " " + cible.getNom() + "[" + cible.getRace().getNom() + "] (" + cible.getMetier().getNom() + ")";
 					break;
 			}
 			result += " " + charge.getName() + '\n';
@@ -66,7 +89,7 @@ public class Generator {
 			result += "Credibilité : " + credit + '%';
 			return result;
 		}else{
-			return "Un inconnu accuse Aryanne(Inquisitrice) d'avoir trop la classe\nCredibilité : 110%";
+			return "Un inconnu accuse Aryanne[Elfe](Inquisitrice) d'avoir trop la classe\nCredibilité : 110%";
 		}
 	}
 }

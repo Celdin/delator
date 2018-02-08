@@ -174,6 +174,9 @@ public class NPC {
 				}
 			}
 		}
+		if(nom == null || nom.isEmpty()){
+			addNom();
+		}
 	}
 
 	private void addRace() {
