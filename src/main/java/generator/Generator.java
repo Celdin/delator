@@ -7,8 +7,9 @@ import java.util.*;
 
 public class Generator {
 	public static String jaccuse() throws IOException {
-		if(new Random().nextInt(100)!=0) {
-			Integer credit = (new Random().nextInt(20) + 1) * 5;
+		Random random = new Random();
+		if(random.nextInt(100)!=0) {
+			Integer credit = (random.nextInt(20) + 1) * 5;
 			List<Target> targets = new ArrayList<>();
 			for (Target target : Target.values()) {
 				for (int i = 0; i < target.getProba(); i++) {
@@ -89,7 +90,11 @@ public class Generator {
 			result += "Credibilité : " + credit + '%';
 			return result;
 		}else{
-			return "Un inconnu accuse Aryanne[Elfe](Inquisitrice) d'avoir trop la classe\nCredibilité : 110%";
+			if(random.nextBoolean()) {
+				return "Un inconnu accuse Aryanne[Elfe](Inquisitrice) d'avoir trop la classe\nCredibilité : 110%";
+			}else {
+				return "Un inconnu accuse Milo[Humain] (Chef Inquisiteur) de... [*la suite du message est indéchifrable*]\nCredibilité : 0%";
+			}
 		}
 	}
 }
