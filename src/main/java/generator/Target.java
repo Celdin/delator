@@ -13,7 +13,7 @@ public enum Target {
 	CONCURRENCE("concurrent", "un", "une", "", "e", 1,
 			new Charge[]{Charge.MESSIANISME, Charge.JURIANISTE, Charge.MORT, Charge.SORCELLERIE, Charge.HERESIE, Charge.ESCLAVAGE, Charge.CHARLATANISME, Charge.COMPLOT},
 					new Reason[]{Reason.Relation, Reason.Visuel, Reason.Auditif, Reason.Pocession, Reason.Comportement}),
-	FAMILLE("un memebre de sa famille", "", "", "", "", 1,
+	FAMILLE("un membre de sa famille", "", "", "", "", 1,
 			new Charge[]{Charge.MESSIANISME, Charge.JURIANISTE, Charge.MORT, Charge.SORCELLERIE, Charge.HERESIE, Charge.ESCLAVAGE, Charge.CHARLATANISME, Charge.COMPLOT},
 			new Reason[]{Reason.Relation, Reason.Visuel, Reason.Auditif, Reason.Pocession, Reason.Comportement}),
 	ETRANGER("étrang", "un", "une", "er", "ère", 1,
