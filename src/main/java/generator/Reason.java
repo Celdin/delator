@@ -1,9 +1,9 @@
 package generator;
 
 public enum Reason {
-    Relation("de relation étrange", 1),
-    Visuel("d'élément vue", 1),
-    Auditif("d'élément entendus", 1),
+    Relation("de relation Ã©trange", 1),
+    Visuel("d'Ã©lÃ©ment vue", 1),
+    Auditif("d'Ã©lÃ©ment entendus", 1),
     Pocession("d'une possession louche", 1),
     Comportement("d'un comportement suspect", 1);
 

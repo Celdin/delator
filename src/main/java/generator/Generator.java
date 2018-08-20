@@ -5,6 +5,8 @@ import generator.npc.NPC;
 import java.io.IOException;
 import java.util.*;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 public class Generator {
 	public static String jaccuse() throws IOException {
 		Random random = new Random();
@@ -86,17 +88,19 @@ public class Generator {
 					break;
 			}
 			result += " " + charge.getName() + '\n';
-			result += "à  cause " + reason.getTexte() + ".\n";
-			result += "Crédibilité : " + credit + '%';
+			result += "Ã  cause " + reason.getTexte() + ".\n";
+			result += "CrÃ©dibilitÃ© : " + credit + '%';
 			return result;
 		}else{
 			switch (random.nextInt(3)) {
 			case 0:
-				return "Un inconnu accuse Aryanne Lindórie[Elfe] (Inquisitrice) d'avoir trop la classe\nCrédibilité : 110%";
+				return "Un inconnu accuse Aryanne LindÃ³rie[Elfe] (Inquisitrice) d'avoir trop la classe\nCrÃ©dibilitÃ© : 110%";
 			case 1:
-				return "Un inconnu accuse Milo[Humain] (Chef Inquisiteur) de... [*la suite du message est indéchiffrable*]\nCrédibilité : 0%";
+				return "Un inconnu accuse Milo[Humain] (Chef Inquisiteur) de... [*la suite du message est indÃ©chiffrable*]\nCrÃ©dibilitÃ© : 0%";
 			case 2:
-				return "Darda'in Drakharthe alias Dédé accuse Aryanne Lindórie[Elfe] (Inquisitrice) et Ka'al En'feyn [Elfe] (Inquisitrice) de l'avoir privé d'un ragout de zombie\nCrédibilité : 80%";
+				return "Darda'in Drakharthe alias DÃ©dÃ© accuse Aryanne LindÃ³rie[Elfe] (Inquisitrice) et Ka'al En'feyn [Elfe] (Inquisitrice) de l'avoir privÃ© d'un ragout de zombie\nCrÃ©dibilitÃ© : 80%";
+			default:
+				return "";
 			}
 		}
 	}
