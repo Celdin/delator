@@ -2,7 +2,7 @@ package generator;
 
 public enum Charge {
 	MESSIANISME("de messianisme", 1),
-	DEZIANISTE("de dezianiste", 1),
+	DEZIANISME("de dezianisMe", 1),
 	JURIANISTE("de jurianiste", 1),
 	MORT("de mort", 1),
 	SORCELLERIE("de sorcellerie", 1),
