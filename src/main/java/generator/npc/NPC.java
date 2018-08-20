@@ -38,9 +38,9 @@ public class NPC {
 	public enum Classe {
 		Barbare,
 		Barde,
-		PrÃ©tre,
+		Prêtre,
 		Paladin,
-		RÃ©deur,
+		Rôdeur,
 		Roublard,
 		Ensorceleur,
 		Magicien;
@@ -49,18 +49,18 @@ public class NPC {
 	public enum Metier {
 		Esclave("Esclave"),
 		Mendiant("Mendiant"),
-		Paysant("Paysant"),
+		Paysan("Paysan"),
 		Serviteur("Serviteur"),
 		Apprenti("Apprenti"),
-		Commercant("CommerÃ§ant"),
+		Commercant("Commerçant"),
 		Artisant("Artisant"),
-		Petit_Proprietaire("petit PropriÃ©taire terrestre"),
+		Petit_Proprietaire("petit propriétaire terrien"),
 		Bourgmestre("Bourgmestre"),
-		Gros_Commercant("gros CommerÃ§ant"),
-		Gros_Proprietaire("grand PropriÃ©taire terrestre"),
-		Pretre("PrÃ©tre"),
+		Gros_Commercant("gros commerçant"),
+		Gros_Proprietaire("grand propriétaire terrien"),
+		Pretre("Prêtre"),
 		Chevalier("Chevalier"),
-		Eveque("Ã©vÃ©que"),
+		Eveque("Évéque"),
 		Banneret("Banneret"),
 		Baron("Baron"),
 		Compte("Compte");
@@ -203,7 +203,7 @@ public class NPC {
 				}
 				break;
 			case Mendiant:
-			case Paysant:
+			case Paysan:
 			case Serviteur:
 				if (rng < 25) {
 					race = Race.Orc;
@@ -346,7 +346,7 @@ public class NPC {
 			if (rng2 == 0) {
 				metier = Metier.Mendiant;
 			} else if (rng2 == 1) {
-				metier = Metier.Paysant;
+				metier = Metier.Paysan;
 			} else if (rng2 == 2) {
 				metier = Metier.Serviteur;
 			} else if (rng2 == 3) {

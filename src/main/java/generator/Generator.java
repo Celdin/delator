@@ -86,14 +86,17 @@ public class Generator {
 					break;
 			}
 			result += " " + charge.getName() + '\n';
-			result += "Ã  cause " + reason.getTexte() + ".\n";
-			result += "CredibilitÃ© : " + credit + '%';
+			result += "à  cause " + reason.getTexte() + ".\n";
+			result += "Crédibilité : " + credit + '%';
 			return result;
 		}else{
-			if(random.nextBoolean()) {
-				return "Un inconnu accuse Aryanne[Elfe](Inquisitrice) d'avoir trop la classe\nCredibilitÃ© : 110%";
-			}else {
-				return "Un inconnu accuse Milo[Humain] (Chef Inquisiteur) de... [*la suite du message est indÃ©chifrable*]\nCredibilitÃ© : 0%";
+			switch (random.nextInt(3)) {
+			case 0:
+				return "Un inconnu accuse Aryanne Lindórie[Elfe] (Inquisitrice) d'avoir trop la classe\nCrédibilité : 110%";
+			case 1:
+				return "Un inconnu accuse Milo[Humain] (Chef Inquisiteur) de... [*la suite du message est indéchiffrable*]\nCrédibilité : 0%";
+			case 2:
+				return "Darda'in Drakharthe alias Dédé accuse Aryanne Lindórie[Elfe] (Inquisitrice) et Ka'al En'feyn [Elfe] (Inquisitrice) de l'avoir privé d'un ragout de zombie\nCrédibilité : 80%";
 			}
 		}
 	}
