@@ -53,7 +53,7 @@ public class NPC {
 		Serviteur("Serviteur"),
 		Apprenti("Apprenti"),
 		Commercant("Commerçant"),
-		Artisant("Artisant"),
+		Artisant("Artisans"),
 		Petit_Proprietaire("petit propriétaire terrien"),
 		Bourgmestre("Bourgmestre"),
 		Gros_Commercant("gros commerçant"),

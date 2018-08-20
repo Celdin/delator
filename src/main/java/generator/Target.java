@@ -19,7 +19,7 @@ public enum Target {
 	ETRANGER("étrang", "un", "une", "er", "ère", 1,
 			new Charge[]{Charge.MESSIANISME, Charge.DEZIANISME, Charge.JURIANISTE, Charge.MORT, Charge.SORCELLERIE, Charge.HERESIE, Charge.ESCLAVAGE, Charge.CHARLATANISME, Charge.COMPLOT},
 			new Reason[]{Reason.Relation, Reason.Visuel, Reason.Auditif, Reason.Pocession, Reason.Comportement}),
-	PHENOMENE("phenoméne", "un", "un", "", "", 1,
+	PHENOMENE("phénomène", "un", "un", "", "", 1,
 			new Charge[]{Charge.MESSIANISME, Charge.DEZIANISME, Charge.JURIANISTE, Charge.MORT, Charge.SORCELLERIE, Charge.HERESIE},
 			new Reason[]{Reason.Visuel, Reason.Auditif, Reason.Comportement}),
 	ANIMALE("animale", "un", "un", "", "", 1,
